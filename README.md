@@ -2,8 +2,8 @@
 
 
 ## Video Swin Transformer
-За основу взята официальная реализация ["Video Swin Transformer"](https://github.com/SwinTransformer/Video-Swin-Transformer).
-где также рассмотрены c3d, csn, i3d, slowfast, swin, tanet, tin, tpn, trn, tsm, tsn, omnisource, r2plus1d
+За основу взята официальная реализация ["Video Swin Transformer"](https://github.com/SwinTransformer/Video-Swin-Transformer) основаная на mmaction2,
+где также рассмотрены c3d, csn, i3d, slowfast, swin, tanet, tin, tpn, trn, tsm, tsn, omnisource, r2plus1d подходы
 
 ![teaser](https://github.com/SwinTransformer/Video-Swin-Transformer/blob/master/figures/teaser.png)
 Базовая структура Video Swin Transformer очень близка к структуре SwinTransformer с добавлением измерения кадра, времени(T) при расчете модели
@@ -52,6 +52,5 @@ top1_acc   0.6460
 top5_acc   0.9033
 
 Evaluating mean_class_accuracy ...
-mean_acc   0.6418
 mean_class_accuracy: 0.6418
 ```
