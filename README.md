@@ -7,6 +7,7 @@
 
 ![teaser](https://github.com/SwinTransformer/Video-Swin-Transformer/blob/master/figures/teaser.png)
 Базовая структура Video Swin Transformer очень близка к структуре SwinTransformer с добавлением измерения кадра, времени(T) при расчете модели
+
 Step:
 
 1. Video to token
