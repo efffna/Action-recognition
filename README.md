@@ -37,14 +37,30 @@ class_name = [
 ```
 python3 preparation_data.py
 ```
-## Docker
-```
-docker build -t mmcv .
-```
-```
-docker run --gpus device=0 -d -ti -v $PWD:/mmcv mmcv
-```
 
+```
+data
+├── train
+    ├── belly_dancing
+            └── ...mp4
+    └── breakdancing
+            └── ...mp4
+    └── ...
+├── val
+    ├── belly_dancing
+            └── ...mp4
+    └── breakdancing
+            └── ...mp4
+    └── ...
+│ 
+└── train.txt
+└── val.txt
+```
+пример train.txt
+```
+belly_dancing/bmWyvU-2Ff4.mp4 1
+...
+```
 ## Запуск
 ```
 export PYTHONPATH="${PYTHONPATH}":pwd
