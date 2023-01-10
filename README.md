@@ -35,7 +35,12 @@ class_name = [
 
 ## Запуск
 ```
-python3 tools/train.py configs/recognition/swin/swin_tiny_patch244_window877_kinetics400_1k.py --cfg-options load_from=swin_tiny_patch244_window877_kinetics400_1k.pth
+Training:
+    python3 train_2d_net.py
+Testing:
+    python3 test_2d_net.py
+Metrics:
+    jupyter notebook preparation_and_metrics.ipynb
 ```
 
 ## Метрики
