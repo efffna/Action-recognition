@@ -8,13 +8,14 @@ RUN apt update && apt upgrade -y && \
 
 RUN apt-get update && apt-get install -y git 
 RUN apt-get install -y libsm6 libxrender1 libfontconfig1 libxext6 libgl1-mesa-glx && \
-    pip3 install -U pip setuptools wheel
-
-
-RUN apt-get pip install mmcv-full==1.3.9 -f https://download.openmmlab.com/mmcv/dist/cu102/torch1.9/index.html
+    pip install -U pip setuptools wheel && \
+    pip install mmcv-full==1.3.9 -f https://download.openmmlab.com/mmcv/dist/cu102/torch1.9/index.html 
 
 RUN git clone https://github.com/open-mmlab/mmcv.git /mmcv
 WORKDIR /mmcv
+COPY requirements.txt $WORKDIR
+
+RUN pip install -r requirements.txt
 RUN git rev-parse --short HEAD
 RUN pip install --no-cache-dir -e .[all] -v && pip install pre-commit && pre-commit install
 

@@ -1,0 +1,7 @@
+numpy==1.22.0
+torch==1.9
+torchvision==0.10.0
+einops==0.6.0
+timm==0.6.12
+decord==0.6.0
+scipy==1.10.0

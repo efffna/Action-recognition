@@ -37,14 +37,26 @@ class_name = [
 ```
 python3 preparation_data.py
 ```
-
+## Docker
+```
+docker build -t mmcv .
+```
+```
+docker run --gpus device=0 -d -ti -v $PWD:/mmcv mmcv
+```
 
 ## Запуск
+```
+export PYTHONPATH="${PYTHONPATH}":pwd
+```
 ```
 python3 tools/train.py configs/recognition/swin/swin_tiny_patch244_window877_kinetics400_1k.py
 ```
 
 ## Метрики
+```
+python3 tools/test.py
+```
 ```
 Evaluating top_k_accuracy ...
 top1_acc   0.6460
