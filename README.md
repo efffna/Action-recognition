@@ -41,7 +41,7 @@ python3 preparation_data.py
 
 ## Запуск
 ```
-python3 tools/train.py configs/recognition/swin/swin_tiny_patch244_window877_kinetics400_1k.py --cfg-options load_from=swin_tiny_patch244_window877_kinetics400_1k.pth
+python3 tools/train.py configs/recognition/swin/swin_tiny_patch244_window877_kinetics400_1k.py
 ```
 
 ## Метрики
