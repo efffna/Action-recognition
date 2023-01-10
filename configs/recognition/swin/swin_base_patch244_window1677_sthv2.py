@@ -1,14 +1,17 @@
 _base_ = [
-    '../../_base_/models/swin/swin_base.py', '../../_base_/default_runtime.py'
+    '../../models/swin/swin_tiny.py', '../../models/default_runtime.py'
 ]
+model=dict(backbone=dict(patch_size=(2,4,4), drop_path_rate=0.1), test_cfg=dict(max_testing_views=4))
 
 # dataset settings
 dataset_type = 'VideoDataset'
-data_root = 'data/sthv2/videos'
-data_root_val = 'data/sthv2/videos'
-ann_file_train = 'data/sthv2/sthv2_train_list_videos.txt'
-ann_file_val = 'data/sthv2/sthv2_val_list_videos.txt'
-ann_file_test = 'data/sthv2/sthv2_val_list_videos.txt'
+
+data_root = 'data/train'
+data_root_val = 'data/val'
+
+ann_file_train = 'data/train.txt'
+ann_file_val = 'data/val.txt'
+ann_file_test = 'data/test.txt'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_bgr=False)
 train_pipeline = [

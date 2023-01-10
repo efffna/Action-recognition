@@ -11,7 +11,7 @@ data_root_val = 'data/val'
 
 ann_file_train = 'data/train.txt'
 ann_file_val = 'data/val.txt'
-ann_file_test = 'data/val.txt'
+ann_file_test = 'data/test.txt'
 
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_bgr=False)
