@@ -38,29 +38,6 @@ class_name = [
 python3 preparation_data.py
 ```
 
-```
-data
-├── train
-    ├── belly_dancing
-            └── ...mp4
-    └── breakdancing
-            └── ...mp4
-    └── ...
-├── val
-    ├── belly_dancing
-            └── ...mp4
-    └── breakdancing
-            └── ...mp4
-    └── ...
-│ 
-└── train.txt
-└── val.txt
-```
-пример train.txt
-```
-belly_dancing/bmWyvU-2Ff4.mp4 1
-...
-```
 ## Запуск
 ```
 export PYTHONPATH="${PYTHONPATH}":pwd
@@ -68,11 +45,11 @@ export PYTHONPATH="${PYTHONPATH}":pwd
 ```
 python3 tools/train.py configs/recognition/swin/swin_tiny_patch244_window877_kinetics400_1k.py
 ```
-
+```
+python3 tools/test.py <CONFIG_FILE> <CHECKPOINT_FILE>
+```
 ## Метрики
-```
-python3 tools/test.py
-```
+
 ```
 Evaluating top_k_accuracy ...
 top1_acc   0.6460
